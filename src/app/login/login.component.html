@@ -1,0 +1,70 @@
+<!-- login.component.html -->
+
+<!-- Container Setup -->
+<div class="min-h-screen flex items-center justify-center bg-gray-100 p-4">
+  <!-- Main Content Container -->
+  <div class="flex w-full max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden">
+    <!-- Left Side (Background Image) -->
+    <div class="w-60 bg-black">
+      <!-- Image -->
+      <img
+        alt="Youth Hostel Interior"
+        class="object-cover w-full h-full"
+        src="https://cdn.internationalstudent.com/images/stock-images/youth-hostel.jpg" 
+        style="aspect-ratio: 16/9; object-fit: cover;"
+      />
+    </div>
+    <!-- Right Side (Content) -->
+    <div class="w-40 p-8 flex flex-col justify-start">
+      <!-- Welcome and App Name -->
+      <div class="mb-8">
+        <h2 class="text-2xl font-semibold">Welcome to</h2>
+        <h2 class="text-2xl font-semibold text-indigo-600">App</h2>
+      </div>
+      <!-- Display Success or Error Message -->
+      <div *ngIf="isLoggedIn; else loginForm" class="login-success-message mb-6">
+        <p>Login successful!</p>
+      </div>
+      <div *ngIf="loginError" class="login-error-message mb-6">
+        <p>Invalid username or password. Please try again.</p>
+      </div>
+      <!-- Login Form -->
+      <ng-template #loginForm>
+        <div>
+          <!-- Username Input Field -->
+          <div class="mb-4">
+            <label class="block text-sm font-semibold mb-2" for="username">Username</label>
+            <input
+              class="input-field"
+              id="username"
+              placeholder="Username"
+              [(ngModel)]="username"
+              autocomplete="username"
+            />
+          </div>
+          <!-- Password Input Field -->
+          <div class="mb-4">
+            <label class="block text-sm font-semibold mb-2" for="password">Password</label>
+            <input
+              class="input-field"
+              id="password"
+              placeholder="Password"
+              type="password"
+              [(ngModel)]="password"
+              autocomplete="password"
+            />
+            <a class="text-xs text-indigo-600 hover:underline" href="#">Forgot password?</a>
+          </div>
+          <!-- Login Button -->
+          <div class="mb-2">
+            <button class="btn-login" (click)="login()">Login</button>
+          </div>
+          <!-- Create an Account Button -->
+          <div>
+            <a routerLink="/create-account" class="btn-login-with-google">Create an Account</a>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

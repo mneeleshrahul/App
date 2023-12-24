@@ -1,0 +1,72 @@
+/* admin-user-management.component.css */
+
+.min-h-screen {
+    min-height: 100vh;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+  
+  .bg-gray-100 {
+    background-color: #f7fafc;
+  }
+  
+  .p-8 {
+    padding: 2rem;
+  }
+  
+  .max-w-2xl {
+    max-width: 42rem;
+    margin: auto;
+  }
+  
+  .bg-white {
+    background-color: #ffffff;
+  }
+  
+  .shadow-lg {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .rounded-lg {
+    border-radius: 0.5rem;
+  }
+  
+  .input-field,
+  .btn-login {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .btn-login {
+    background-color: #4f46e5;
+    color: #ffffff;
+    border: none;
+  }
+  
+  .btn-login:hover {
+    background-color: #3b389d;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  

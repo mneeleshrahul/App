@@ -1,0 +1,54 @@
+<!-- create-account.component.html -->
+
+<div class="min-h-screen flex items-center justify-center bg-gray-100">
+  <div class="max-w-2xl mx-auto p-8 bg-white shadow-lg rounded-lg">
+    <h2 class="text-2xl font-semibold mb-4">User Management</h2>
+    <p class="mb-4">Enter user details to create a new account</p>
+    <div class="space-y-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="flex">
+          <div class="mb-4 mr-4">
+            <label for="first-name">First name</label>
+            <input id="first-name" placeholder="John" class="input-field" required>
+          </div>
+          <div class="mb-4">
+            <label for="last-name">Last name</label>
+            <input id="last-name" placeholder="Doe" class="input-field" required>
+          </div>
+        </div>
+        <div class="mb-4">
+          <label for="username">Username</label>
+          <input id="username" placeholder="john_doe" class="input-field" required>
+        </div>
+      </div>
+      <div class="mb-4">
+        <label for="email">Email</label>
+        <input id="email" placeholder="johndoe@example.com" class="input-field" type="email" required>
+      </div>
+      <div class="mb-4">
+        <label for="password">Password</label>
+        <input id="password" class="input-field" required type="password">
+      </div>
+      <div class="mb-4">
+        <label for="dob">Date of Birth</label>
+        <input id="dob" class="input-field" type="date" required>
+      </div>
+      <div class="mb-4">
+        <label for="gender">Gender</label>
+        <select id="gender" class="input-field" required>
+          <option value="" disabled>Select gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+    </div>
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+    
+    <button class="btn-login" (click)="createUser()">Create User</button>
+    <!-- <button class="btn-login" (click)="createUser()">Create User</button> -->
+    <!-- <button class="btn-login" (click)="createUser()">Create User</button> -->
+  </div>
+

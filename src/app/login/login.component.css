@@ -1,0 +1,152 @@
+/* login.component.css */
+
+/* Container Styles */
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.bg-gray-100 {
+  background-color: #f7fafc;
+  margin: 0;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+/* Main Content Styles */
+.w-full {
+  width: 100%;
+}
+
+.max-w-4xl {
+  max-width: 100%;
+}
+
+/* Background Image Styles */
+.bg-black {
+  width: 60%;
+}
+
+/* Right Side (Content) Styles */
+.w-full {
+  width: 100%;
+}
+
+.md\:w-2\/5 {
+  width: 40%;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+/* Content Layout Styles */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+/* Welcome and App Name Styles */
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-indigo-600 {
+  color: #4f46e5;
+}
+
+/* Success and Error Message Styles */
+.login-success-message p {
+  color: green;
+}
+
+.login-error-message p {
+  color: red;
+}
+
+/* Input Field Styles */
+.input-field {
+  /* Add your input field styles here */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease-in-out;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  height: 2.5rem;
+  width: 100%;
+  margin-bottom: 0.75rem; /* Adjust the spacing between fields */
+}
+
+/* Button Styles */
+.btn-login,
+.btn-login-with-google {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease-in-out;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  height: 2.5rem;
+  width: 100%;
+  margin-bottom: 0.75rem; /* Adjust the spacing between buttons */
+}
+
+.btn-login {
+  background-color: #4f46e5;
+  color: #ffffff;
+}
+
+.btn-login:hover {
+  background-color: #3b389d;
+}
+
+.btn-login-with-google {
+  border: 1px solid #4f46e5;
+  background-color: #ffffff;
+  color: #4f46e5;
+}
+
+.btn-login-with-google:hover {
+  background-color: #3b389d;
+  color: #ffffff;
+}
+/* Forgot Password Link Styles */
+.forgot-password-link {
+  color: #4f46e5;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.forgot-password-link:hover {
+  color: red;
+}
