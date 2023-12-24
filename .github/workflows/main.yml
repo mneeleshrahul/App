@@ -3,7 +3,8 @@ name: CI/CD Workflow
 on:
   push:
     branches:
-      - main
+      - dev
+      - stage
 
 jobs:
   build:
@@ -23,3 +24,37 @@ jobs:
 
       - name: Build
         run: npm run build
+
+  deploy-dev:
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/dev'
+
+    steps:
+      - name: Deploy to Dev Environment
+        run: |
+          # Add your deployment commands for dev environment
+          # Example: Deploy to a dev server, cloud platform, etc.
+          echo "Deploying to Dev environment"
+
+      - name: Get Dev Deployment Link
+        run: |
+          # Add commands to get the dev deployment link
+          echo "Dev Deployment Link: https://dev.example.com"
+
+  deploy-stage:
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/stage'
+
+    steps:
+      - name: Deploy to Stage Environment
+        run: |
+          # Add your deployment commands for stage environment
+          # Example: Deploy to a staging server, cloud platform, etc.
+          echo "Deploying to Stage environment"
+
+      - name: Get Stage Deployment Link
+        run: |
+          # Add commands to get the stage deployment link
+          echo "Stage Deployment Link: https://stage.example.com"
